@@ -1,0 +1,96 @@
+* {
+    text-decoration: none;
+    font-family: sans-serif;
+}
+#navbar {
+    height: 100%; /* Full-height: remove this if you want "auto" height */
+    width: 320px; /* Set the width of the sidebar */
+    position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+    z-index: 1; /* Stay on top */
+    top: 0; /* Stay at the top */
+    left: 0;
+    background-color: #f8f8ff; /* Black */
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 5px;
+}
+@media (max-width: 850px) {
+    #navbar {
+        display: none;
+    }
+}
+#navbar h1 {
+    text-align: center;
+    font-size: 20px;
+    color: black;
+    display: block;
+}
+#navbar a {
+    padding: 0px 8px 0px 16px;
+    text-decoration: none;
+    opacity: 60%;
+    font-size: 25px;
+    color: rgb(36, 36, 36);
+    display: block;
+}
+#navbar a:hover {
+    color: black;
+    opacity: 100%;
+}
+.main {
+    margin-left: 320px; /* Same as the width of the sidebar */
+    padding: 0px 10px;
+}
+@media (max-width: 850px){
+    .main {
+        margin-left: 10px;
+    }
+}
+@media screen and (max-height: 450px) {
+    #navbar {padding-top: 15px;}
+    #navbar a {font-size: 18px;}
+}
+.line {
+    color: black;
+}
+.main {
+    padding-top: 20px;
+}
+.main-section header {
+    font-size: 30px;
+}
+.main-section p {
+    padding-left: 15px;
+}
+#database {
+    width: 70%;
+}
+code {
+    font-family: Consolas,"courier new";
+    display: block;
+    white-space: pre-line;
+    margin-right: 30px;
+    margin-left: 30px;
+    color: rgb(105, 105, 105);
+    background-color: #e6e6e6;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 75%;
+}
+.and{
+    margin-left: 15px;
+}
+.and code {
+    margin-left: 30px;
+}
+.or{
+    margin-left: 15px;
+}
+.or code {
+    margin-left: 30px;
+}
+.colors {
+    background-color: #FFC222;
+    background-color: #515356;
+    background-color: #C88A12;
+    
+}

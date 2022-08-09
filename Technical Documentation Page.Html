@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Technical Documentation Page.css">
+    <title>Technical Documentation Page</title>
+</head>
+<body>
+    <main id="main-doc">
+        <nav id="navbar">
+            <h1>SQL Tutorial</h1>
+            <hr class="line">
+            <a href="#Introduction">Introduction</a>
+            <hr class="line">
+            <a href="#Database">Database</a>
+            <hr class="line">
+            <a href="#SELECT">SELECT</a>
+            <hr class="line">
+            <a href="#SELECT DISTINCT">SELECT DISTINCT</a>
+            <hr class="line">
+            <a href="#WHERE">WHERE</a>
+            <hr class="line">
+            <a href="#AND, OR and NOT">AND, OR and NOT</a>
+            <hr class="line">
+            <a href="#ORDER BY">ORDER BY</a>
+            <hr class="line">
+            <a href="#INSERT INTO">INSERT INTO</a>
+            <hr class="line">
+            <a href="#UPDATE">UPDATE</a>
+            <hr class="line">
+            <a href="#DELETE">DELETE</a>
+            <hr class="line">
+            <a href="#MIN and MAX">MIN and MAX</a>
+            <hr class="line">
+            <a href="#COUNT, AVG and SUM">COUNT, AVG and SUM</a>
+            <hr class="line">
+            <a href="#LIKE">LIKE</a>
+            <hr class="line">
+            <a href="#IN">IN</a>
+            <hr class="line">
+            <a href="#BETWEEN">BETWEEN</a>
+            <hr class="line">
+            <a href="#JOIN">JOIN</a>
+            <hr class="line">
+            <a href="Reference">Reference</a>
+            <hr class="line">
+            <!--
+            <a href="">SHhort</a>
+            <hr class="line">
+            <a href="">LOng LOng LOng</a>
+            <hr class="line">
+            <a href="">MIddle MIddle</a>
+            <hr class="line">
+            <a href="">SHhort</a>
+            <hr class="line">
+            -->
+        </nav>
+        <div class="main">
+            <section id="Introduction" class="main-section">
+                <header>Introduction</header>
+                <p>SQL is a standard language for accessing and manipulating databases.</p>
+                <p><b>What is SQL?</b></p>
+                <ul>
+                    <li>SQL stands for Structured Query Language</li>
+                    <li>SQL lets you access and manipulate databases</li>
+                    <li>SQL became a standard of the American National Standards Institute (ANSI) in 1986, and of the International Organization for Standardization (ISO) in 1987</li>
+                </ul>
+                <p><b>What Can SQL do?</b></p>
+                <ul>
+                    <Li>SQL can execute queries against a database</Li>
+                    <li>SQL can retrieve data from a database</li>
+                    <li>SQL can insert records in a database</li>
+                    <li>SQL can insert records in a database</li>
+                    <li>SQL can update records in a database</li>
+                    <li>SQL can delete records from a database</li>
+                    <li>SQL can create new databases</li>
+                    <li>SQL can create new tables in a database</li>
+                    <li>SQL can create stored procedures in a database</li>
+                    <li>SQL can create views in a database</li>
+                    <li>SQL can set permissions on tables, procedures, and views</li>
+                </ul>
+            </section>
+            <br>
+            <hr>
+            <br>
+            <section id="Database" class="main-section">
+                <header>Database Tables</header>
+                <ul>
+                    <li>A database most often contains one or more tables</li>
+                    <li>Each table is identified by a name</li>
+                    <li>Each table contain one or more columns each has different name and the same data type</li>
+                    <li>Tables contain records (rows) with data</li>
+                </ul>
+                <!--
+                <img id="database" alt="Database"
+                    src="https://bit.ly/3glxiqv">
+                -->
+            </section>
+            <br>
+            <hr>
+            <br>
+            <section id="SELECT" class="main-section">
+                <header>SELECT Statement</header>
+                <p>The <span class="rec_color">SELECT</span> statement is used to select data from a database</p>
+                <p>The data returned is stored in a result table, called the result-set</p>
+                <code>SELECT column1, column2, ... FROM table_name;</code>
+            </section>
+            <br>
+            <hr>
+            <br>
+            <section id="SELECT DISTINCT" class="main-section">
+                <header>SELECT DISTINCT Statement</header>
+                <p>The SELECT DISTINCT statement is used to return only distinct (different) values</p>
+                <code>SELECT DISTINCT column1, column2, ... FROM table_name;</code>
+            </section>
+            <br>
+            <hr>
+            <br>
+            <section id="WHERE" class="main-section">
+                <header>WHERE Clause</header>
+                <p>The WHERE clause is used to filter records</p>
+                <p>It is used to extract only those records that fulfill a specified condition</p>
+                <code>SELECT column1, column2, ... FROM table_name WHERE condition;</code>
+                <p><span style="color: red;"><b>Note:</b></span> The WHERE clause is not only used in SELECT statements, it is also used in UPDATE, DELETE, etc.!</p>
+            </section>
+            <br>
+            <hr>
+            <br>
+            <section id="AND, OR and NOT" class="main-section">
+                <header>AND, OR and NOT Operators</header>
+                <p>The WHERE clause can be combined with AND, OR, and NOT operators</p>
+                <p>The AND and OR operators are used to filter records based on more than one condition:</p>
+                <div class="and">
+                    <p>The AND operator displays a record if all the conditions separated by AND are TRUE</p>
+                    <code>SELECT column1, column2, ... FROM table_name
+                        WHERE condition1 AND condition2 AND condition3 ...;</code>
+                </div>
+                <div class="or">
+                    <p>The OR operator displays a record if any of the conditions separated by OR is TRUE</p>
+                    <code>SELECT column1, column2, ... FROM table_name
+                        WHERE condition1 OR condition2 OR condition3 ...;</code>
+                </div>
+                <div>
+                    <p>The NOT operator displays a record if the condition(s) is NOT TRUE</p>
+                    <code>SELECT column1, column2, ... FROM table_name
+                        WHERE NOT condition;
+                    </code>
+                </div>
+            </section>
+            <br>
+            <hr>
+            <br>
+            <section id="ORDER BY" class="main-section">
+                <header>ORDER BY Keyword</header>
+                <p>The ORDER BY keyword is used to sort the result-set in ascending or descending order</p>
+                <p>The ORDER BY keyword sorts the records in ascending order by default</p>
+                <p>To sort the records in descending order, use the DESC keyword</p>
+                <code>SELECT column1, column2, ...
+                    FROM table_name
+                    ORDER BY column1, column2, ... ASC|DESC;</code>
+            </section>
+            <br>
+            <hr>
+            <br>
+            <section id="INSERT INTO" class="main-section">
+                <header>INSERT INTO Statement</header>
+                <p>The INSERT INTO statement is used to insert new records in a table</p>
+                <p>It is possible to write the INSERT INTO statement in two ways:</p>
+                <div class="and">
+                    <p>1. Specify both the column names and the values to be inserted</p>
+                    <code>INSERT INTO table_name (column1, column2, column3, ...)
+                        VALUES (value1, value2, value3, ...);</code>
+                </div>
+                <div class="or">
+                    <p>2. If you are adding values for all the columns of the table, you do not need to specify the column names in the SQL query. However, make sure the order of the values is in the same order as the columns in the table</p>
+                    <code>INSERT INTO table_name
+                        VALUES (value1, value2, value3, ...);</code>
+                </div>
+            </section>
+            <br>
+            <hr>
+            <br>
+            <section id="UPDATE" class="main-section">
+                <header>UPDATE Statement</header>
+                <p>The UPDATE statement is used to modify the existing records in a table</p>
+                <code>UPDATE table_name
+                    SET column1 = value1, column2 = value2, ...
+                    WHERE condition;</code>
+                <p></p>
+            </section>
+            <br>
+            <hr>
+            <br>
+            <section id="DELETE" class="main-section">
+                <header>DELETE Statement</header>
+                <p>The DELETE statement is used to delete existing records in a table</p>
+                <code>DELETE FROM table_name WHERE condition;</code>
+                <p>The statement below deletes all the rows from a table without deleting the table</p>
+                <code>DELETE FROM table_name;</code>
+            </section>
+            <br>
+            <hr>
+            <br>
+            <section id="MIN and MAX" class="main-section">
+                <header>MIN and MAX Functions</header>
+                <p>The MIN() function returns the smallest value of the selected column</p>
+                <code>SELECT MIN(column_name)
+                    FROM table_name
+                    WHERE condition;</code>
+                <p>The MAX() function returns the largest value of the selected column</p>
+                <code>SELECT MAX(column_name)
+                    FROM table_name
+                    WHERE condition;</code>
+            </section>
+            <br>
+            <hr>
+            <br>
+            <section id="COUNT, AVG and SUM" class="main-section">
+                <header>COUNT, AVG and SUM Functions</header>
+                <p>The COUNT() function returns the number of rows that matches a specified criterion</p>
+                <code>SELECT COUNT(column_name)
+                    FROM table_name
+                    WHERE condition;</code>
+                <p>The AVG() function returns the average value of a numeric column</p>
+                <code>SELECT AVG(column_name)
+                    FROM table_name
+                    WHERE condition;</code>
+                <p>The SUM() function returns the total sum of a numeric column</p>
+                <code>SELECT SUM(column_name)
+                    FROM table_name
+                    WHERE condition;</code>
+                <p><span style="color: red;"><b>Note:</b></span> NULL values are not counted and ignored</p>
+            </section>
+            <br>
+            <hr>
+            <br>
+            <section id="LIKE" class="main-section">
+                <header>LIKE Operator</header>
+                <p>The LIKE operator is used in a WHERE clause to search for a specified pattern in a column</p>
+                <code>SELECT column1, column2, ...
+                    FROM table_name
+                    WHERE columnN LIKE pattern;</code>
+                <p></p>
+            </section>
+            <br>
+            <hr>
+            <br>
+            <section id="IN" class="main-section">
+                <header>IN Operator</header>
+                <p>The IN operator allows you to specify multiple values in a WHERE clause</p>
+                <p>The IN operator is a shorthand for multiple OR conditions</p>
+                <code>SELECT column_name(s)
+                    FROM table_name
+                    WHERE column_name IN (value1, value2, ...);</code>
+                <code>SELECT column_name(s)
+                    FROM table_name
+                    WHERE column_name IN (SELECT STATEMENT);</code>
+            </section>
+            <br>
+            <hr>
+            <br>
+            <section id="BETWEEN" class="main-section">
+                <header>BETWEEN Operator</header>
+                <p>The BETWEEN operator selects values within a given range</p>
+                <p>The BETWEEN operator is inclusive: begin and end values are included</p>
+                <code>SELECT column_name(s)
+                    FROM table_name
+                    WHERE column_name BETWEEN value1 AND value2;</code>
+            </section>
+            <br>
+            <hr>
+            <br>
+            <section id="JOIN" class="main-section">
+                <header>JOIN Clause</header>
+                <p>A JOIN clause is used to combine rows from two or more tables, based on a related column between them</p>
+                <p>There are different types of the JOINs in SQL:</p>
+                <ul>
+                    <li class="and">(INNER) JOIN: Returns records that have matching values in both tables</li>
+                    <li class="and">LEFT (OUTER) JOIN: Returns all records from the left table, and the matched records from the right table</li>
+                    <li class="and">RIGHT (OUTER) JOIN: Returns all records from the right table, and the matched records from the left table</li>
+                    <li class="and">FULL (OUTER) JOIN: Returns all records when there is a match in either left or right table</li>
+                </ul>
+            </section>
+            <br>
+            <hr>
+            <section id="Reference" class="main-section">
+                <header>Reference</header>
+                <p>All the documentation in this page is taken from <a href="https://www.w3schools.com/sql/default.asp">W3schols</a></p>
+            </section>
+        </div>
+        
+    </main>
+</body>
+</html>
